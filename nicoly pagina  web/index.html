@@ -139,11 +139,88 @@
         }
 
         .about-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(0, 201, 201, 0.1) 0%, rgba(0, 153, 153, 0.1) 100%);
+            padding: 3rem 2rem;
+            border-radius: 12px;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 201, 201, 0.15);
+            border: 2px solid rgba(0, 201, 201, 0.3);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .about-section h2 {
+            color: #00C9C9;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 201, 201, 0.2);
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #00C9C9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 201, 201, 0.2);
+            background: linear-gradient(135deg, rgba(0, 201, 201, 0.05) 0%, rgba(0, 153, 153, 0.05) 100%);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #00C9C9;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         footer {
@@ -190,8 +267,26 @@
 
     <div class="container">
         <section id="sobre" class="about-section">
-            <h2>Bem-vindo ao TechVlog!</h2>
+            <h2>✨ Bem-vindo ao TechVlog!</h2>
             <p>Compartilhamos conhecimento sobre criação de vídeos, produção de conteúdo, tecnologia e programação. Aqui você encontrará dicas, tutoriais e insights sobre como criar vlogs incríveis e utilizar as melhores ferramentas tecnológicas.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎥</span>
+                    <h3>Produção de Vídeo</h3>
+                    <p>Técnicas profissionais e ferramentas para criar conteúdo visual de alta qualidade</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💡</span>
+                    <h3>Ideias Inovadoras</h3>
+                    <p>Estratégias criativas para engajar sua audiência e crescer exponencialmente</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Crescimento Digital</h3>
+                    <p>Dicas de monetização e estratégias para expandir seu canal e comunidade</p>
+                </div>
+            </div>
         </section>
 
         <section id="posts">
