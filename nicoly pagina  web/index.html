@@ -1,8 +1,267 @@
-<h1>meu blog tech</P>
-<p>vou compartilhar conhecimento sobre tecnologia proramação<p>
-
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta chart="utf-8">
-    <mea nam="viewport"content
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVlog - Blog sobre Criação de Vídeos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00C9C9 0%, #009999 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00C9C9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .post {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .post-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #00C9C9 0%, #009999 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .post-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: #00C9C9;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .read-more:hover {
+            background: #009999;
+        }
+
+        .about-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎬 TechVlog</h1>
+        <p>Seu blog sobre criação de vídeos e tecnologia</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#posts">Posts</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="sobre" class="about-section">
+            <h2>Bem-vindo ao TechVlog!</h2>
+            <p>Compartilhamos conhecimento sobre criação de vídeos, produção de conteúdo, tecnologia e programação. Aqui você encontrará dicas, tutoriais e insights sobre como criar vlogs incríveis e utilizar as melhores ferramentas tecnológicas.</p>
+        </section>
+
+        <section id="posts">
+            <h2>Posts Recentes</h2>
+            <div class="blog-grid">
+                <article class="post">
+                    <div class="post-image">🎥</div>
+                    <div class="post-content">
+                        <p class="post-date">30 de Junho, 2026</p>
+                        <h3 class="post-title">Como Começar seu Primeiro Vlog</h3>
+                        <p class="post-excerpt">Guia completo para iniciantes: escolha do equipamento, planejamento de conteúdo e primeiros passos na criação de vídeos.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-image">🎬</div>
+                    <div class="post-content">
+                        <p class="post-date">28 de Junho, 2026</p>
+                        <h3 class="post-title">Ferramentas de Edição Gratuitas</h3>
+                        <p class="post-excerpt">Conheça as melhores ferramentas de edição de vídeo gratuitas e de código aberto para criar conteúdo profissional.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-image">💻</div>
+                    <div class="post-content">
+                        <p class="post-date">25 de Junho, 2026</p>
+                        <h3 class="post-title">Otimizar Vídeos para YouTube</h3>
+                        <p class="post-excerpt">Aprenda as melhores práticas de SEO para vídeos, títulos, descrições e tags que aumentam visualizações.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-image">🎙️</div>
+                    <div class="post-content">
+                        <p class="post-date">22 de Junho, 2026</p>
+                        <h3 class="post-title">Áudio Profissional em Vídeos</h3>
+                        <p class="post-excerpt">Dicas essenciais para capturar e editar áudio de alta qualidade nos seus vlogs.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-image">🌟</div>
+                    <div class="post-content">
+                        <p class="post-date">20 de Junho, 2026</p>
+                        <h3 class="post-title">Estratégias de Monetização</h3>
+                        <p class="post-excerpt">Como ganhar dinheiro com seu canal: monetização, parcerias e estratégias de crescimento.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-image">📱</div>
+                    <div class="post-content">
+                        <p class="post-date">18 de Junho, 2026</p>
+                        <h3 class="post-title">Vlogging com Smartphone</h3>
+                        <p class="post-excerpt">Não precisa de câmera cara! Aprenda a criar conteúdo profissional usando apenas seu celular.</p>
+                        <a href="#" class="read-more">Leia Mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contato">
+        <p>&copy; 2026 TechVlog. Todos os direitos reservados.</p>
+        <p>Contato: contato@techvlog.com</p>
+    </footer>
+</body>
